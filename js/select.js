@@ -22,7 +22,6 @@ fetch('selection.php')
             vinylNode.querySelector('.card-text').textContent = vinyle.album
             vinylNode.querySelector('.card-small').textContent = vinyle.year 
             
-            //const ul = document.querySelector('section ul')
             const li = document.createElement('li')
             li.textContent = `${vinyle.artiste} - Album "${vinyle.album}" - Sorti en ${vinyle.year}`
 
