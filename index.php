@@ -31,7 +31,7 @@
             <input type="text" id="album" name="album">
             <label for="year">Année</label>
             <input type="number" id="year" name="year">
-            <button id="button">Ajouter</button>
+            <a class="button" href="#" title="Ajouter" aria-label="Ajouter">Ajouter</a>
         </form>
     </div>
 
@@ -47,7 +47,7 @@
             <li data-mode="dark">Dark</li>
         </ul>
         <div id="logo">
-            <img src="public/assets/logo_boiteavinyles2.webp" alt="logo La Boite à Vinyles">
+            <img src="public/assets/man.svg" alt="logo La Boite à Vinyles">
             <h1 class="lobster-two-regular-italic">La Boîte à Vinyles (liste)</h1>
         </div>
     </header>
@@ -88,8 +88,7 @@
                         <h5 class="card-title"></h5>
                         <p class="card-text"></p>
                         <p><small class="card-small"></small></p>
-                        <button type="button">Plus d'infos</button>
-                    </div>
+                        <a class="button" href="#" title="Infos" aria-label="Infos">infos</a>                    </div>
                 </div>
             </div>
         </div>
