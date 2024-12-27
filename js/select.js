@@ -57,9 +57,24 @@ document.querySelectorAll('#dark-mode li').forEach(item => {
   });
   
   function darkMode() {
+    const picture = document.querySelector("#logo img");
+    const cardPicture = document.querySelectorAll(".card-back img");
+    
     let body = document.querySelector('body');
     let mode = this.dataset.mode;
     body.dataset.theme = mode;
+    
+    if (mode === "dark") {
+        picture.src = "public/assets/manBaW.webp";
+        cardPicture.forEach(item => {
+            item.src = "https://picsum.photos/180/220?grayscale";
+        });
+    } else {
+        picture.src = "public/assets/man.svg";
+        cardPicture.forEach(item => {
+            item.src = "https://picsum.photos/180/220";
+        });
+    }
   }
 
 /**
@@ -102,4 +117,5 @@ document.querySelectorAll('#dark-mode li').forEach(item => {
 
     return card
 }*/
+
 

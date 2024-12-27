@@ -79,21 +79,26 @@
     <!-- Template pour les vinyles -->
     <template id="template">
         <div class="card">
-            <div>
-                <div>
-                    <img src="" class="card-img-top" alt="">
+            <div class="card-inner">
+                <div class="card-front">
+                    <div>
+                        <img src="" class="card-img-top" alt="">
+                    </div>
+                    <div>
+                        <div class="card-body">
+                            <h5 class="card-title"></h5>
+                            <p class="card-text"></p>
+                            <p><small class="card-small"></small></p>
+                            <a id="btn-flip" class="button" href="#" title="Infos" aria-label="Infos">Flip</a>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <div class="card-body">
-                        <h5 class="card-title"></h5>
-                        <p class="card-text"></p>
-                        <p><small class="card-small"></small></p>
-                        <a class="button" href="#" title="Infos" aria-label="Infos">infos</a>                    </div>
+                <div class="card-back">
+                    <img src="https://picsum.photos/180/220" alt="Cover">
                 </div>
             </div>
         </div>
     </template>
-
 </body>
 
 </html>
