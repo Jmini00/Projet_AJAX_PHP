@@ -142,13 +142,13 @@
     }
   }
 
-  /*button {
+  #button {
     cursor: pointer;
     &:hover {
-      background-color: #000000;
-      color: #FFFFFF;
+      background-color: var(--green);
+      /*color: #FFFFFF;*/
     }
-  }*/
+  }
 
   strong {
     color: var(--links);
@@ -219,6 +219,8 @@
 
 .hide {
   display: none;
+  transition: 350ms ease-in-out;
+  /*animation: fadeOut 2s ease-in-out;*/
 }
 
 @keyframes anim-sidenav-on {
@@ -235,6 +237,19 @@
   }
   100% {
     left: -100vw;
+  }
+}
+
+.fadeOut {
+  animation: fadeOut 2s ease-in-out;
+}
+
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
   }
 }
 

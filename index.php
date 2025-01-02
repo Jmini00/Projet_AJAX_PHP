@@ -2,7 +2,7 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>AJAX PHP (fetch then/catch)</title>
@@ -31,7 +31,8 @@
             <input type="text" id="album" name="album">
             <label for="year">Année</label>
             <input type="number" id="year" name="year">
-            <a class="button" href="#" title="Ajouter" aria-label="Ajouter">Ajouter</a>
+            <!--<a type="submit" class="button" title="Ajouter" aria-label="Ajouter">Ajouter</a>-->
+            <button id="button">Ajouter</button>
         </form>
     </div>
 
@@ -52,7 +53,7 @@
         </div>
     </header>
 
-    <section>
+    <section id="section">
         <ul></ul>
     </section>
 
@@ -94,7 +95,7 @@
                     </div>
                 </div>
                 <div class="card-back">
-                    <img src="https://picsum.photos/180/220" alt="Cover">
+                    <img class="card-back-img" src="https://picsum.photos/180/220" alt="Cover">
                 </div>
             </div>
         </div>

@@ -12,7 +12,8 @@ fetch('selection.php')
                 // Exécute le code dans X millisecondes
                 setTimeout(() => {
                 // Masquer le loader
-                document.querySelector('.loader').classList.add('hide')
+                //document.querySelector('.loader').classList.add('fadeOut');
+                document.querySelector('.loader').classList.add('hide');
                 grid.style.animation = "fadeIn 5s";
                 ul.style.animation = "fadeIn 3s";
 

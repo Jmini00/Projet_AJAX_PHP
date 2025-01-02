@@ -13,10 +13,10 @@ const form = document.querySelector('form').addEventListener('submit', function(
     // Vérifie que tous les champs sont remplis
     if (!artiste || !album || !year) {
         Swal.fire({
-            position: "bottom",
+            position: "bottom", 
             icon: 'warning',
             title: 'Attention',
-            text: 'Remplisez tous les champs !',
+            text: 'Remplissez tous les champs !',
             showConfirmButton: false,
             timer: 2000,
             width: '30%',
@@ -50,8 +50,11 @@ const form = document.querySelector('form').addEventListener('submit', function(
             card.querySelector('.card-text').textContent = album
             card.querySelector('.card-small').textContent = year
 
+            const cardPicture = document.querySelector(".card-back img");
+            cardPicture.src = "https://picsum.photos/180/220";
+
             // Ajoute la "li" à la liste en place et une carte
-            document.querySelector('ul').appendChild(li)
+            document.querySelector('#section ul').appendChild(li)
             document.querySelector('#vinyles').appendChild(card)
             
             // Réinitialise le formulaire
@@ -71,8 +74,8 @@ const form = document.querySelector('form').addEventListener('submit', function(
             }
         })
         .catch(error => console.error(error))
-        alert('Impossible de soumettre le formulaire pour le moment.');
-})
+        /*alert('Impossible de soumettre le formulaire pour le moment.');*/
+});
 
 
 
