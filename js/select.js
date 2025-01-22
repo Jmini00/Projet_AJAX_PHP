@@ -19,6 +19,7 @@ fetch('selection.php')
 
         vinyles.forEach(vinyle => {
             const vinylNode = document.importNode(template, true)
+            vinylNode.querySelector('.card').id = `vinyle-${vinyle.id}`
             vinylNode.querySelector('.card-title').textContent = vinyle.artiste
             vinylNode.querySelector('.card-text').textContent = vinyle.album
             vinylNode.querySelector('.card-small').textContent = vinyle.year 
