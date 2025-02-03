@@ -5,6 +5,10 @@
 fetch('selection.php')
     .then(response => response.json())
     .then(vinyles => {
+
+        // Trier les vinyles par nom d'artiste (ordre alphabétique)
+        //vinyles.sort((a, b) => a.artiste.localeCompare(b.artiste));
+
             const grid = document.getElementById('vinyles');
             const template = document.getElementById('template').content;
             const ul = document.querySelector('section ul');
@@ -31,10 +35,38 @@ fetch('selection.php')
             ul.appendChild(li)
             
             })
+            // Lance le moteur de recherche une fois que les cartes sont générées
+            searchVinyl();
         },6000)
         clearTimeout();
     })
     .catch(error => console.error(error))
+
+/**
+ * Moteur de recherche par artiste
+ */
+function searchVinyl() {
+    const search = document.getElementById('search');
+    const vinyleCards = document.querySelectorAll('#vinyles .card');
+
+    search.addEventListener('input', () => {
+        const query = search.value.toLowerCase().trim();
+
+        vinyleCards.forEach(vinyleCard => {
+            const artistName = vinyleCard.querySelector('.card-title').textContent.toLowerCase();
+            // Vérifie si l'artiste correspond à la recherche
+            if (artistName.includes(query)) {
+                vinyleCard.style.display = ''; // Affiche la carte
+                //vinyleCard.classList.remove('hidden');
+                //vinyleCard.classList.add('visible');
+            } else {
+                vinyleCard.style.display = 'none'; // Masque la carte
+                //vinyleCard.classList.remove('visible');
+                //vinyleCard.classList.add('hidden');
+            }
+        });
+    });
+}
 
 
 /// Bouton menu slider
